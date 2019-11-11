@@ -9,7 +9,7 @@ bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
 export CLICOLOR=1
-export GREP_OPTIONS='--color=always'
+export GREP_OPTIONS='--color=auto' # set auto so that it colors to tty but not when redirecting and piping
 
 # enable C-s forward search
 [[ $- == *i* ]] && stty -ixon
