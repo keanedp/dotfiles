@@ -1,3 +1,4 @@
+
 bind '"\t":menu-complete'
 bind "set show-all-if-ambiguous on"
 bind "set completion-ignore-case on"
@@ -83,4 +84,6 @@ function prompt() {
     PS1=$(printf "%s\n-> " "$(prompt_left)")
 }
 
+# set title bar: username | pwd
+PROMPT_COMMAND='echo -ne "\033]0;${USER} | ${PWD}\007"'
 prompt
