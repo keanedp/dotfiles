@@ -1,9 +1,9 @@
 # requite ccat from package manager
 cat_handler() {
     if [ -x "$(command -v ccat)" ]; then
-		echo "ccat"
+	    echo "ccat"
 	else
-		echo "cat"
+	    echo "cat"
 	fi
 }
 
