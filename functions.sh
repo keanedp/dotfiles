@@ -3,7 +3,7 @@ function git_status() {
 	if [ ! "${branch}" = "" ]
 	then
 		git_changed=`parse_git_changed`
-		echo "[${branch}${git_changed}]"
+		echo "${branch}${git_changed}"
 	else
 		echo ""
 	fi

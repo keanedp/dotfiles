@@ -47,7 +47,7 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 # dynamic prompt
 precmd () {
     print -Pn "\e]2;%n | %~\a" # set title bar: username | pwd
-    RPROMPT="$(git_status) %F{blue}] %F{green}%D{%L:%M} %F{yellow}%D{%p}%f"
+    RPROMPT="%F{yellow}$(git_status) %F{blue}] %F{green}%D{%L:%M} %F{yellow}%D{%p}%f"
 }
 
 setopt prompt_subst
