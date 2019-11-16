@@ -31,9 +31,7 @@ bindkey "^[[B" down-line-or-beginning-search
     fi
 }
 
-# Load and initialize the completion system ignoring insecure directories with a
-# cache time of 20 hours, so it should almost always regenerate the first time a
-# shell is opened each day.
+# initialize comoletion system, caching for 20 hours
 autoload -Uz compinit
 comp_files=(${ZDOTDIR}/.zcompdump(Nm-20))
 if (( $#comp_files )); then
