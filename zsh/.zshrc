@@ -12,7 +12,6 @@ unsetopt global_rcs
 # enable C-s forward search
 [[ $- == *i* ]] && stty -ixon
 
-
 # enable up down history and place cursor at end of text
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
@@ -21,23 +20,22 @@ zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search
 bindkey "^[[B" down-line-or-beginning-search
 
-{
-    syntax_highlighting="/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+syntax_highlighting="/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
     
-    if [[ -f ${syntax_highlighting} ]]; then
-        . "${syntax_highlighting}"
-    else
-        echo "Missing zsh-syntax-highlighting, install with package manager (brew)"
-    fi
-}
+if [[ -f ${syntax_highlighting} ]]; then
+    . "${syntax_highlighting}"
+else
+    echo "Missing zsh-syntax-highlighting, install with package manager (brew)"
+fi
+
 
 # initialize comoletion system, caching for 20 hours
 autoload -Uz compinit
 comp_files=(${ZDOTDIR}/.zcompdump(Nm-20))
 if (( $#comp_files )); then
-  compinit -i -C
+    compinit -i -C
 else
-  compinit -i
+    compinit -i
 fi
 unset comp_files
 

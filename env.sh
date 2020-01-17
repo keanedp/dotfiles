@@ -4,3 +4,5 @@ export CLICOLOR=1
 # set auto so that it colors to tty but not when redirecting and piping
 export GREP_OPTIONS='--color=auto'
 
+export EDITOR="vim"
+
