@@ -7,7 +7,11 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
 
+# disable reading /etc/zsh* config files
 unsetopt global_rcs
+
+# use emacs keybindings
+bindkey -e
 
 # enable C-s forward search
 [[ $- == *i* ]] && stty -ixon
