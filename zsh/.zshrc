@@ -27,7 +27,7 @@ bindkey "^[[B" down-line-or-beginning-search
 if [[ $(uname) = "Darwin" ]]; then
     syntax_highlighting="/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 else
-    syntax_highlighting="/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+    syntax_highlighting="/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 fi
 
 if [[ -f ${syntax_highlighting} ]]; then
