@@ -64,6 +64,9 @@ if command -v direnv >/dev/null 2>/dev/null; then
     eval "$(direnv hook zsh)"
 fi
 
+if command -v rbenv >/dev/null 2>/dev/null; then
+  eval "$(rbenv init -)"
+fi
 
 # local system settings, not under source control
 for f in $ZDOTDIR/.zshrc_local/*.sh; do
