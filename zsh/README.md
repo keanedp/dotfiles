@@ -10,7 +10,7 @@ Full blown oh-my-zsh config can be found at: https://github.com/keanedp/.zsh
 
 ### Setup
 
-Install zsh-syntax-highlighting and zsh-completions with your favorite backage manager (brew, pacman, etc...)
+Install zsh-syntax-highlighting and zsh-completions with your favorite package manager (brew, pacman, etc...)
 
 Create a file named ~/.zshenv
 
