@@ -36,7 +36,6 @@ else
     echo "Missing zsh-syntax-highlighting, install with package manager (brew)"
 fi
 
-
 # initialize comoletion system, caching for 20 hours
 autoload -Uz compinit
 comp_files=(${ZDOTDIR}/.zcompdump(Nm-20))
@@ -62,10 +61,6 @@ PROMPT='%F{green}%2c%F{blue} [%f '
 # add direnv hook
 if command -v direnv >/dev/null 2>/dev/null; then
     eval "$(direnv hook zsh)"
-fi
-
-if command -v rbenv >/dev/null 2>/dev/null; then
-  eval "$(rbenv init -)"
 fi
 
 # local system settings, not under source control

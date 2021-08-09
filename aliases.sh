@@ -7,4 +7,13 @@ cat_handler() {
 	fi
 }
 
+sed_handler() {
+    if [ -x "$(command -v gsed)" ]; then
+	    echo "gsed"
+	else
+	    echo "sed"
+	fi
+}
+
 alias cat=$(cat_handler)
+alias sed=$(sed_handler)
