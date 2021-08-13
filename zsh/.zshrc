@@ -36,7 +36,7 @@ else
     echo "Missing zsh-syntax-highlighting, install with package manager (brew)"
 fi
 
-# initialize comoletion system, caching for 20 hours
+# initialize completion system, caching for 20 hours
 autoload -Uz compinit
 comp_files=(${ZDOTDIR}/.zcompdump(Nm-20))
 if (( $#comp_files )); then
